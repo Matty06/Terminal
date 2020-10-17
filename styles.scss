@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+$terminal-border:   #3d4a3c;
+$bg-header:         #444340;
+$bg-body:           #000;
+$header-color:      #a1a09d;
+$body-color:        #6bce14;
+$control--red:      #eb504a;
+$control--yellow:   #f7bd32;
+$control--green:    #69ccaa;
+$control-size:        13px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.terminal {
+    width: 465px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 2px solid $terminal-border;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 10%;
+        padding: 2px 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        background-color: $bg-header;
+        color: $header-color;
+    }
+
+    &__body {
+        height: 90%;
+        padding: 6px 8px;
+        font-family: "Space Mono", sans-serif;
+        font-size: 11px;
+        background-color: $bg-body;
+        color: $body-color;
+    }
+
+}
+
+
+.terminal .terminal__header {
+
+
+    .controls {
+        display: flex;
+
+        .control {
+            width: $control-size;
+            height: $control-size;
+            margin-right: 4px;
+            border-radius: 50%;
+
+            &:last-child { margin-right: 0;}
+
+            &.control--red {
+                background-color: $control--red;
+            }
+
+            &.control--yellow {
+                background-color: $control--yellow;
+            }
+
+            &.control--green {
+                background-color: $control--green;
+            }
+        }
+    }
+
+    p {
+        margin-left: 12px;
+    }
+
+}
